@@ -7,6 +7,19 @@ from kivy.uix.popup import Popup
 from kivy.uix.filechooser import FileChooserListView
 import cv2
 from pyzbar import pyzbar
+import sentry_sdk
+
+import sentry_sdk
+sentry_sdk.init(
+    dsn="https://f7fd68b27a194720ab3e47e71956ebb1@o4505277052354560.ingest.sentry.io/4505277094625280",
+
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    # We recommend adjusting this value in production.
+    traces_sample_rate=1.0
+)
+
+
 
 class BarcodeScannerApp(App):
     def build(self):
